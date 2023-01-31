@@ -20,12 +20,12 @@ public class Main {
         }
 
         if (W * 2 > S && W > S) {
-            ans = S * Math.max(X, Y);
-            if (Math.abs(X - Y) % 2 != 0) {
-                ans += W - S;
+            if (Math.abs(X - Y) % 2 == 0) {
+                ans = S * Math.max(X, Y);
+            } else { // Math.abs(X - Y) % 2 != 0
+                ans = S * (Math.max(X, Y) - 1) + W;
             }
         }
-        
         System.out.println(ans);
     }
 }
