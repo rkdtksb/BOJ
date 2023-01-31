@@ -11,8 +11,9 @@ public class Main {
             int cnt = 0;
             String str = sc.next();
             for (int j = 0; j < str.length(); j++) {
-                if (str.charAt(j) == '(') cnt++;
-                if (str.charAt(j) == ')') cnt--;
+                char ch = str.charAt(j);
+                if (ch == '(') cnt++;
+                if (ch == ')') cnt--;
                 if (cnt < 0) break;
             }
             System.out.println(cnt == 0 ? "YES" : "NO");
