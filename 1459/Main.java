@@ -22,7 +22,8 @@ public class Main {
         if (W * 2 > S && W > S) {
             ans = S * Math.max(X, Y);
             if (Math.abs(X - Y) % 2 != 0) {
-                ans += W - S;
+                ans -= S;
+                ans += W;
             }
         }
         System.out.println(ans);
