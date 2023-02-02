@@ -10,7 +10,6 @@ public class Main {
         Y = sc.nextLong();
         W = sc.nextLong();
         S = sc.nextLong();
-
         if (W * 2 <= S) {
             ans = W * (X + Y);
         }
