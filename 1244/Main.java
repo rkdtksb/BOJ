@@ -12,16 +12,16 @@ public class Main {
         }
         q = sc.nextInt();
         for (int i = 0; i < q; i++) {
-            int t = sc.nextInt();
-            int x = sc.nextInt();
-            if (t == 1) {
-                for (int j = x; j <= n; j += x) {
+            int m = sc.nextInt();
+            int p = sc.nextInt();
+            if (m == 1) {
+                for (int j = p; j <= n; j += p) {
                     a[j] ^= 1;
                 }
             } else {
-                a[x] ^= 1;
-                int l = x - 1;
-                int r = x + 1;
+                a[p] ^= 1;
+                int l = p - 1;
+                int r = p + 1;
                 while (l > 0 && r <= n && a[l] == a[r]) {
                     a[l] ^= 1;
                     a[r] ^= 1;
