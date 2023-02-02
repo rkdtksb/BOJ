@@ -15,7 +15,6 @@ public class Main {
         for (int i = 3; i <= n; i++) {
             d[i] = (d[i - 2] + d[i - 1]) % MOD;
         }
-
         System.out.println(d[n]);
     }
 }
