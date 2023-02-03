@@ -19,7 +19,6 @@ public class Main {
                     a[j] ^= 1;
                 }
             } else {
-                a[p] ^= 1;
                 int l = p - 1;
                 int r = p + 1;
                 while (l > 0 && r <= n && a[l] == a[r]) {
@@ -28,6 +27,7 @@ public class Main {
                     l--;
                     r++;
                 }
+                a[p] ^= 1;
             }
         }
         for (int i = 1; i <= n; i++) {
