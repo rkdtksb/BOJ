@@ -10,17 +10,17 @@ public class Main {
         Y = sc.nextLong();
         W = sc.nextLong();
         S = sc.nextLong();
-        if (W * 2 <= S) {
+        if (W * 2 < S) {
             ans = W * (X + Y);
-        }
-        if (W * 2 > S && W <= S) {
-            ans = S * Math.min(X, Y) + W * Math.abs(X - Y);
-        }
-        if (W * 2 > S && W > S) {
-            ans = S * Math.max(X, Y);
-            if (Math.abs(X - Y) % 2 != 0) {
-                ans -= S;
-                ans += W;
+        } else {
+            if (W < S) {
+                ans = S * Math.min(X, Y) + W * Math.abs(X - Y);
+            } else {
+                ans = S * Math.max(X, Y);
+                if (Math.abs(X - Y) % 2 != 0) {
+                    ans -= S;
+                    ans += W;
+                }
             }
         }
         System.out.println(ans);
