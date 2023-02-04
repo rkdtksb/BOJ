@@ -19,8 +19,7 @@ public class Main {
             }
             Arrays.sort(b[i], 0, p);
             if (p < l) a[i] = 1;
-            if (p > l) a[i] = b[i][p - l];
-            if (p == l) a[i] = b[i][0];
+            else a[i] = b[i][p - l];
         }
         Arrays.sort(a, 0, n);
         for (int i = 0; i < n; i++) {
