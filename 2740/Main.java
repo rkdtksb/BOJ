@@ -27,7 +27,7 @@ public class Main {
                 for (int k = 0; k < M; k++) {
                     sum += A[i][k] * B[k][j];
                 }
-                System.out.printf("%d ", sum);
+                System.out.print(sum + " ");
             }
             System.out.println();
         }
