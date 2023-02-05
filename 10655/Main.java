@@ -7,7 +7,7 @@ public class Main {
     static int[] y = new int[100005];
 
     static int dist(int p, int q) {
-        return Math.abs(x[p] - x[q]) + Math.abs(y[p] - y[q]);
+        return Math.abs(x[q] - x[p]) + Math.abs(y[q] - y[p]);
     }
 
     public static void main(String[] args) {
@@ -18,11 +18,11 @@ public class Main {
             y[i] = sc.nextInt();
         }
         for (int i = 1; i < N; i++) {
-            tot += dist(i, i - 1);
+            tot += dist(i - 1, i);
         }
         ans = tot;
         for (int i = 1; i < N - 1; i++) {
-            ans = Math.min(ans, tot - dist(i, i - 1) - dist(i, i + 1) + dist(i + 1, i - 1));
+            ans = Math.min(ans, tot - dist(i - 1, i) - dist(i, i + 1) + dist(i - 1, i + 1));
         }
         System.out.println(ans);
     }
