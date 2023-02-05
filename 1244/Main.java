@@ -12,26 +12,26 @@ public class Main {
         }
         q = sc.nextInt();
         for (int i = 0; i < q; i++) {
-            int m = sc.nextInt();
-            int p = sc.nextInt();
-            if (m == 1) {
-                for (int j = p; j <= n; j += p) {
+            int t = sc.nextInt();
+            int x = sc.nextInt();
+            if (t == 1) {
+                for (int j = x; j <= n; j += x) {
                     a[j] ^= 1;
                 }
             } else {
-                int l = p - 1;
-                int r = p + 1;
+                int l = x - 1;
+                int r = x + 1;
                 while (l > 0 && r <= n && a[l] == a[r]) {
                     a[l] ^= 1;
                     a[r] ^= 1;
                     l--;
                     r++;
                 }
-                a[p] ^= 1;
+                a[x] ^= 1;
             }
         }
         for (int i = 1; i <= n; i++) {
-            System.out.printf("%d ", a[i]);
+            System.out.print(a[i] + " ");
             if (i % 20 == 0) System.out.println();
         }
     }
