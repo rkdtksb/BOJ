@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Main {
-    static int n, m;
+    static int n, q;
     static int[] a = new int[105];
 
     public static void main(String[] args) {
@@ -10,8 +10,8 @@ public class Main {
         for (int i = 1; i <= n; i++) {
             a[i] = sc.nextInt();
         }
-        m = sc.nextInt();
-        for (int i = 0; i < m; i++) {
+        q = sc.nextInt();
+        for (int i = 0; i < q; i++) {
             int t = sc.nextInt();
             int x = sc.nextInt();
             if (t == 1) {
