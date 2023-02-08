@@ -16,7 +16,7 @@ public class Main {
         for (int i = 0; i < X; i++) {
             sum += a[i];
         }
-        for (int i = X; i < N; i++) {
+        for (int i = X; i <= N; i++) {
             if (ans1 < sum) {
                 ans1 = sum;
                 ans2 = 0;
