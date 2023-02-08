@@ -19,13 +19,13 @@ public class Main {
         for (int i = X; i <= N; i++) {
             if (ans1 < sum) {
                 ans1 = sum;
-                ans2 = 0;
+                ans2 = 1;
             }
-            if (ans1 == sum) ans2++;
+            else if (ans1 == sum) ans2++;
             sum -= a[i - X];
             sum += a[i];
         }
         if (ans1 == 0) System.out.println(NO_VISITORS);
-        else System.out.printf("%d%n%d%n", ans1, ans2);
+        else System.out.printf("%d%n%d", ans1, ans2);
     }
 }
