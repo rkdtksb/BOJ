@@ -16,7 +16,8 @@ public class Main {
                 if (ch == ')') cnt--;
                 if (cnt < 0) break;
             }
-            System.out.println(cnt == 0 ? VALID : INVALID);
+            if (cnt == 0) System.out.println(VALID);
+            else System.out.println(INVALID);
         }
     }
 }
