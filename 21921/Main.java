@@ -16,14 +16,18 @@ public class Main {
         for (int i = 0; i < X; i++) {
             sum += a[i];
         }
-        for (int i = X; i <= N; i++) {
+        ans1 = sum;
+        ans2 = 1;
+        for (int i = X; i < N; i++) {
+            sum -= a[i - X];
+            sum += a[i];
             if (ans1 < sum) {
                 ans1 = sum;
                 ans2 = 1;
             }
-            else if (ans1 == sum) ans2++;
-            sum -= a[i - X];
-            sum += a[i];
+            else if (ans1 == sum) {
+                ans2++;
+            }
         }
         if (ans1 == 0) System.out.println(NO_VISITORS);
         else System.out.printf("%d%n%d", ans1, ans2);
