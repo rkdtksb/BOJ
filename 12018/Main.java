@@ -14,17 +14,17 @@ public class Main {
         for (int i = 0; i < n; i++) {
             int p = sc.nextInt();
             int l = sc.nextInt();
-            Arrays.fill(b, 0);
+            Arrays.fill(a, 0);
             for (int j = 0; j < p; j++) {
-                b[j] = sc.nextInt();
+                a[j] = sc.nextInt();
             }
-            Arrays.sort(b, 0, p);
-            if (p < l) a[i] = 1;
-            else a[i] = b[p - l];
+            Arrays.sort(a, 0, p);
+            if (p < l) b[i] = 1;
+            else b[i] = a[p - l];
         }
-        Arrays.sort(a, 0, n);
+        Arrays.sort(b, 0, n);
         for (int i = 0; i < n; i++) {
-            m -= a[i];
+            m -= b[i];
             if (m >= 0) ans++;
         }
         System.out.println(ans);
