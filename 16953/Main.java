@@ -17,12 +17,11 @@ public class Main {
                 B /= 10;
             }
             else {
-                ans = -1;
                 break;
             }
             ans++;
         }
-        if (B != A) System.out.println(-1);
+        if (A != B) System.out.println(-1);
         else System.out.println(ans);
     }
 }
