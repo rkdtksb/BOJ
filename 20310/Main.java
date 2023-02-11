@@ -20,7 +20,7 @@ public class Main {
                 System.out.print(0);
                 n--;
             }
-            if (ch == '1' && m > 0) {
+            else if (ch == '1' && m > 0) {
                 m--;
             }
             else if (ch == '1' && m == 0) {
