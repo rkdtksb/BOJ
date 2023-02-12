@@ -26,13 +26,9 @@ public class Main {
         for (int i = 0; i < N; i++) {
             String str = sc.next();
             for (int j = 0; j < M; j++) {
-                if (str.charAt(j) == '1') {
-                    dist[i][j] = 0;
-                    Q.offer(new Pair(i, j));
-                }
-                if (str.charAt(j) == '0') {
-                    dist[i][j] = -1;
-                }
+                char ch = str.charAt(j);
+                if (ch == '0') dist[i][j] = -1;
+                if (ch == '1') Q.offer(new Pair(i, j));
             }
         }
         while (!Q.isEmpty()) {
