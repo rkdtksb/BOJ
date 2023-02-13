@@ -26,9 +26,9 @@ public class Main {
         M = sc.nextInt();
         for (int i = 0; i < N; i++) {
             for (int j = 0; j < M; j++) {
-                int p = sc.nextInt();
-                if (p == 0) dist[i][j] = -1;
-                if (p == 1) Q.offer(new Pair(i, j));
+                int s = sc.nextInt();
+                if (s == 0) dist[i][j] = -1;
+                if (s == 1) Q.offer(new Pair(i, j));
             }
         }
         while (!Q.isEmpty()) {
