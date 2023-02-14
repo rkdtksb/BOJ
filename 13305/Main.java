@@ -10,10 +10,10 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         N = sc.nextInt();
         for (int i = 0; i < N - 1; i++) {
-            a[i] = sc.nextInt();
+            a[i] = sc.nextLong();
         }
         for (int i = 0; i < N; i++) {
-            b[i] = sc.nextInt();
+            b[i] = sc.nextLong();
         }
         ans = a[0] * b[0];
         dis = b[0];
