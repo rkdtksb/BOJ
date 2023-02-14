@@ -12,7 +12,7 @@ public class Main {
             long ans = 0;
             long cur = 0;
             for (int j = 1; j <= N; j++) {
-                a[j] = sc.nextInt();
+                a[j] = sc.nextLong();
             }
             cur = a[N];
             for (int j = N - 1; j > 0; j--) {
