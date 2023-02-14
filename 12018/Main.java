@@ -14,7 +14,6 @@ public class Main {
         for (int i = 0; i < n; i++) {
             int p = sc.nextInt();
             int l = sc.nextInt();
-            Arrays.fill(a, 0);
             for (int j = 0; j < p; j++) {
                 a[j] = sc.nextInt();
             }
