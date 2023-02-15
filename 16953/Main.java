@@ -12,15 +12,14 @@ public class Main {
         while (A < B) {
             if (B % 2 == 0) {
                 B /= 2;
-                ans++;
             }
             else if (B % 10 == 1) {
                 B /= 10;
-                ans++;
             }
             else {
                 break;
             }
+            ans++;
         }
         if (A != B) System.out.println(-1);
         else System.out.println(ans);
