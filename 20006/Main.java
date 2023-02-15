@@ -33,7 +33,7 @@ public class Main {
             PQ.offer(cur);
             for (int i = 0; i < sz; i++) {
                 Pair nxt = Q.peek(); Q.poll();
-                if (mn <= nxt.l && mx >= nxt.l && PQ.size() < m) PQ.offer(nxt);
+                if (mn <= nxt.l && nxt.l <= mx && PQ.size() < m) PQ.offer(nxt);
                 else Q.offer(nxt);
             }
             if (PQ.size() == m) System.out.println(START);
