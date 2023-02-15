@@ -21,7 +21,7 @@ public class Main {
             } else {
                 int l = x - 1;
                 int r = x + 1;
-                while (l > 0 && r <= n && a[l] == a[r]) {
+                while (0 < l && r <= n && a[l] == a[r]) {
                     a[l] ^= 1;
                     a[r] ^= 1;
                     l--;
