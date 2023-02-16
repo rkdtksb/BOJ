@@ -27,9 +27,9 @@ public class Main {
         }
         while (!Q.isEmpty()) {
             Pair cur = Q.peek(); Q.poll();
+            int sz = Q.size();
             int mn = cur.l - 10;
             int mx = cur.l + 10;
-            int sz = Q.size();
             PQ.offer(cur);
             for (int i = 0; i < sz; i++) {
                 Pair nxt = Q.peek(); Q.poll();
