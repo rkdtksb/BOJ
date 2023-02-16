@@ -13,7 +13,8 @@ public class Main {
 
     static int p, m;
     static Queue<Pair> Q = new ArrayDeque<>();
-    static PriorityQueue<Pair> PQ = new PriorityQueue<>((a, b) -> a.n.compareTo(b.n));
+    static PriorityQueue<Pair> PQ = new PriorityQueue<>(
+            (a, b) -> a.n.compareTo(b.n));
     static final String WAIT = "Waiting!", START = "Started!";
 
     public static void main(String[] args) {
