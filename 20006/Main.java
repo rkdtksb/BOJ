@@ -28,13 +28,12 @@ public class Main {
         }
         while (!Q.isEmpty()) {
             Pair cur = Q.peek(); Q.poll();
-            int sz = Q.size();
-            int mn = cur.l - 10;
-            int mx = cur.l + 10;
             PQ.offer(cur);
+            int sz = Q.size();
             for (int i = 0; i < sz; i++) {
                 Pair nxt = Q.peek(); Q.poll();
-                if (mn <= nxt.l && nxt.l <= mx && PQ.size() < m) PQ.offer(nxt);
+                int dif = Math.abs(cur.l - nxt.l);
+                if (dif <= 10 && PQ.size() < m) PQ.offer(nxt);
                 else Q.offer(nxt);
             }
             if (PQ.size() == m) System.out.println(START);
