@@ -28,8 +28,8 @@ public class Main {
         }
         while (!Q.isEmpty()) {
             Pair cur = Q.peek(); Q.poll();
-            PQ.offer(cur);
             int sz = Q.size();
+            PQ.offer(cur);
             for (int i = 0; i < sz; i++) {
                 Pair nxt = Q.peek(); Q.poll();
                 int dif = Math.abs(cur.l - nxt.l);
