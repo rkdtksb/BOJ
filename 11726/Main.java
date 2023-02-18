@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 public class Main {
     static int n;
+
     static int[] d = new int[1005];
     static final int MOD = 10007;
 
