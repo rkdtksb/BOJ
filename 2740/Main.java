@@ -1,31 +1,31 @@
 import java.util.Scanner;
 
 public class Main {
-    static int N, M, K;
-    static int[][] A = new int[105][105];
-    static int[][] B = new int[105][105];
+    static int n, m, k;
+    static int[][] a = new int[105][105];
+    static int[][] b = new int[105][105];
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        N = sc.nextInt();
-        M = sc.nextInt();
-        for (int i = 0; i < N; i++) {
-            for (int j = 0; j < M; j++) {
-                A[i][j] = sc.nextInt();
+        n = sc.nextInt();
+        m = sc.nextInt();
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                a[i][j] = sc.nextInt();
             }
         }
-        M = sc.nextInt();
-        K = sc.nextInt();
-        for (int i = 0; i < M; i++) {
-            for (int j = 0; j < K; j++) {
-                B[i][j] = sc.nextInt();
+        m = sc.nextInt();
+        k = sc.nextInt();
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < k; j++) {
+                b[i][j] = sc.nextInt();
             }
         }
-        for (int i = 0; i < N; i++) {
-            for (int j = 0; j < K; j++) {
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < k; j++) {
                 int sum = 0;
-                for (int k = 0; k < M; k++) {
-                    sum += A[i][k] * B[k][j];
+                for (int l = 0; l < m; l++) {
+                    sum += a[i][l] * b[l][j];
                 }
                 System.out.print(sum + " ");
             }
