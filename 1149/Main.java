@@ -1,8 +1,10 @@
 import java.util.Scanner;
 
 public class Main {
-    static int N;
-    static int[][] d = new int[1005][3];
+    static int n;
+    static int[] r = new int[1005];
+    static int[] g = new int[1005];
+    static int[] b = new int[1005];
 
     static int min(int a, int b) {
         if (a < b) return a;
@@ -11,17 +13,17 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        N = sc.nextInt();
-        for (int i = 1; i <= N; i++) {
-            d[i][0] = sc.nextInt();
-            d[i][1] = sc.nextInt();
-            d[i][2] = sc.nextInt();
+        n = sc.nextInt();
+        for (int i = 1; i <= n; i++) {
+            r[i] = sc.nextInt();
+            g[i] = sc.nextInt();
+            b[i] = sc.nextInt();
         }
-        for (int i = 1; i <= N; i++) {
-            d[i][0] += min(d[i - 1][1], d[i - 1][2]);
-            d[i][1] += min(d[i - 1][0], d[i - 1][2]);
-            d[i][2] += min(d[i - 1][0], d[i - 1][1]);
+        for (int i = 1; i <= n; i++) {
+            r[i] += min(g[i - 1], b[i - 1]);
+            g[i] += min(r[i - 1], b[i - 1]);
+            b[i] += min(r[i - 1], g[i - 1]);
         }
-        System.out.println(min(d[N][0], min(d[N][1], d[N][2])));
+        System.out.println(min(r[n], min(g[n], b[n])));
     }
 }
