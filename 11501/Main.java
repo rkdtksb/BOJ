@@ -1,13 +1,13 @@
 import java.util.Scanner;
 
 public class Main {
-    static int T;
+    static int t;
     static long[] a = new long[1000005];
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        T = sc.nextInt();
-        for (int i = 0; i < T; i++) {
+        t = sc.nextInt();
+        for (int i = 0; i < t; i++) {
             int N = sc.nextInt();
             long ans = 0;
             long cur = 0;
