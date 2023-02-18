@@ -8,14 +8,14 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         t = sc.nextInt();
         for (int i = 0; i < t; i++) {
-            int N = sc.nextInt();
+            int n = sc.nextInt();
             long ans = 0;
             long cur = 0;
-            for (int j = 1; j <= N; j++) {
+            for (int j = 1; j <= n; j++) {
                 a[j] = sc.nextLong();
             }
-            cur = a[N];
-            for (int j = N - 1; j > 0; j--) {
+            cur = a[n];
+            for (int j = n - 1; j > 0; j--) {
                 cur = Math.max(cur, a[j]);
                 ans += cur - a[j];
             }
