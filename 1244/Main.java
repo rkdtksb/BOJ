@@ -11,12 +11,12 @@ public class Main {
             a[i] = sc.nextInt();
         }
         m = sc.nextInt();
-        for (int i = 0; i < m; i++) {
+        while (m-- > 0) {
             int t = sc.nextInt();
             int x = sc.nextInt();
             if (t == 1) {
-                for (int j = x; j <= n; j += x) {
-                    a[j] ^= 1;
+                for (int i = x; i <= n; i += x) {
+                    a[i] ^= 1;
                 }
             } else {
                 int l = x - 1;
