@@ -8,7 +8,7 @@ public class Main {
 
     static int min(int a, int b) {
         if (a < b) return a;
-        else return b;
+        return b;
     }
 
     public static void main(String[] args) {
