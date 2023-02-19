@@ -20,31 +20,35 @@ public class Main {
     static int[] dx = {-2, -2, -1, -1, 1, 1, 2, 2};
     static int[] dy = {-1, 1, -2, 2, -2, 2, -1, 1};
 
+    static void bfs(int n, int m, int l) {
+        dist[n][m] = 0;
+        Q.offer(new Pair(n, m));
+        while (!Q.isEmpty()) {
+            Pair cur = Q.peek(); Q.poll();
+            for (int dir = 0; dir < 8; dir++) {
+                int nx = cur.x + dx[dir];
+                int ny = cur.y + dy[dir];
+                if (nx < 0 || ny < 0 || nx >= l || ny >= l) continue;
+                if (dist[nx][ny] >= 0) continue;
+                dist[nx][ny] = dist[cur.x][cur.y] + 1;
+                Q.offer(new Pair(nx, ny));
+            }
+        }
+    }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         t = sc.nextInt();
-        for (int i = 0; i < t; i++) {
+        while (t-- > 0) {
             int l = sc.nextInt();
             int n = sc.nextInt();
             int m = sc.nextInt();
             int x = sc.nextInt();
             int y = sc.nextInt();
-            for (int j = 0; j < l; j++) {
-                Arrays.fill(dist[j], -1);
+            for (int i = 0; i < l; i++) {
+                Arrays.fill(dist[i], -1);
             }
-            dist[n][m] = 0;
-            Q.offer(new Pair(n, m));
-            while (!Q.isEmpty()) {
-                Pair cur = Q.peek(); Q.poll();
-                for (int dir = 0; dir < 8; dir++) {
-                    int nx = cur.x + dx[dir];
-                    int ny = cur.y + dy[dir];
-                    if (nx < 0 || ny < 0 || nx >= l || ny >= l) continue;
-                    if (dist[nx][ny] >= 0) continue;
-                    dist[nx][ny] = dist[cur.x][cur.y] + 1;
-                    Q.offer(new Pair(nx, ny));
-                }
-            }
+            bfs(n, m, l);
             System.out.println(dist[x][y]);
         }
     }
