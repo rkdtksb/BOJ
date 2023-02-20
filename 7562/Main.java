@@ -20,9 +20,9 @@ public class Main {
     static int[] dx = {-2, -2, -1, -1, 1, 1, 2, 2};
     static int[] dy = {-1, 1, -2, 2, -2, 2, -1, 1};
 
-    static void bfs(int n, int m, int l) {
-        dist[n][m] = 0;
-        Q.offer(new Pair(n, m));
+    static void bfs(int x, int y, int l) {
+        dist[x][y] = 0;
+        Q.offer(new Pair(x, y));
         while (!Q.isEmpty()) {
             Pair cur = Q.peek(); Q.poll();
             for (int dir = 0; dir < 8; dir++) {
@@ -41,15 +41,15 @@ public class Main {
         t = sc.nextInt();
         while (t-- > 0) {
             int l = sc.nextInt();
-            int n = sc.nextInt();
-            int m = sc.nextInt();
             int x = sc.nextInt();
             int y = sc.nextInt();
+            int n = sc.nextInt();
+            int m = sc.nextInt();
             for (int i = 0; i < l; i++) {
                 Arrays.fill(dist[i], -1);
             }
-            bfs(n, m, l);
-            System.out.println(dist[x][y]);
+            bfs(x, y, l);
+            System.out.println(dist[n][m]);
         }
     }
 }
