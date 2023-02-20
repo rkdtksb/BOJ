@@ -20,20 +20,6 @@ public class Main {
     static int[] dx = {-1, -1, -1, 0, 0, 1, 1, 1};
     static int[] dy = {-1, 0, 1, -1, 1, -1, 0, 1};
 
-    static void bfs() {
-        while (!Q.isEmpty()) {
-            Pair cur = Q.peek(); Q.poll();
-            for (int dir = 0; dir < 8; dir++) {
-                int nx = cur.x + dx[dir];
-                int ny = cur.y + dy[dir];
-                if (nx < 0 || ny < 0 || nx >= n || ny >= m) continue;
-                if (dist[nx][ny] >= 0) continue;
-                dist[nx][ny] = dist[cur.x][cur.y] + 1;
-                Q.offer(new Pair(nx, ny));
-            }
-        }
-    }
-
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         n = sc.nextInt();
@@ -45,7 +31,17 @@ public class Main {
                 if (s == 1) Q.offer(new Pair(i, j));
             }
         }
-        bfs();
+        while (!Q.isEmpty()) {
+            Pair cur = Q.peek(); Q.poll();
+            for (int dir = 0; dir < 8; dir++) {
+                int nx = cur.x + dx[dir];
+                int ny = cur.y + dy[dir];
+                if (nx < 0 || ny < 0 || nx >= n || ny >= m) continue;
+                if (dist[nx][ny] >= 0) continue;
+                dist[nx][ny] = dist[cur.x][cur.y] + 1;
+                Q.offer(new Pair(nx, ny));
+            }
+        }
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < m; j++) {
                 ans = Math.max(ans, dist[i][j]);
