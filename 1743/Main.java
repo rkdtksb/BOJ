@@ -15,7 +15,6 @@ public class Main {
     static int n, m, k;
     static int ans;
     static int[][] a = new int[105][105];
-    static boolean[][] vis = new boolean[105][105];
     static Queue<Pair> Q = new ArrayDeque<>();
 
     static int[] dx = {1, 0, -1, 0};
@@ -23,7 +22,7 @@ public class Main {
 
     static int bfs(int x, int y) {
         int cnt = 1;
-        vis[x][y] = true;
+        a[x][y] = 0;
         Q.offer(new Pair(x, y));
         while (!Q.isEmpty()) {
             Pair cur = Q.peek(); Q.poll();
@@ -31,9 +30,9 @@ public class Main {
                 int nx = cur.x + dx[dir];
                 int ny = cur.y + dy[dir];
                 if (nx <= 0 || ny <= 0 || nx > n || ny > m) continue;
-                if (a[nx][ny] == 0 || vis[nx][ny]) continue;
+                if (a[nx][ny] == 0) continue;
                 cnt++;
-                vis[nx][ny] = true;
+                a[nx][ny] = 0;
                 Q.offer(new Pair(nx, ny));
             }
         }
@@ -52,7 +51,7 @@ public class Main {
         }
         for (int i = 1; i <= n; i++) {
             for (int j = 1; j <= m; j++) {
-                if (a[i][j] == 1 && !vis[i][j]) {
+                if (a[i][j] == 1) {
                     ans = Math.max(ans, bfs(i, j));
                 }
             }
