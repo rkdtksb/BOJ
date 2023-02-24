@@ -10,7 +10,8 @@ public class Main {
         dist[st] = 0;
         Q.offer(st);
         while (!Q.isEmpty()) {
-            int cur = Q.peek(); Q.poll();
+            int cur = Q.peek();
+            Q.poll();
             for (int nxt : adj.get(cur)) {
                 if (dist[nxt] == -1) {
                     dist[nxt] = dist[cur] + 1;
@@ -30,7 +31,7 @@ public class Main {
         for (int i = 0; i <= n; i++) {
             adj.add(new ArrayList<>());
         }
-        for (int i = 0; i < m; i++) {
+        while (m-- > 0) {
             int x = sc.nextInt();
             int y = sc.nextInt();
             adj.get(x).add(y);
