@@ -25,8 +25,7 @@ public class Main {
         a[x][y] = 0;
         Q.offer(new Pair(x, y));
         while (!Q.isEmpty()) {
-            Pair cur = Q.peek();
-            Q.poll();
+            Pair cur = Q.peek(); Q.poll();
             for (int dir = 0; dir < 4; dir++) {
                 int nx = cur.x + dx[dir];
                 int ny = cur.y + dy[dir];
