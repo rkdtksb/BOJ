@@ -21,7 +21,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         n = sc.nextInt();
         m = sc.nextInt();
-        for (int i = 0; i <= n; i++) {
+        while (n-- >= 0) {
             adj.add(new ArrayList<>());
         }
         while (m-- > 0) {
