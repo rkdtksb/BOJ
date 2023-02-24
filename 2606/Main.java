@@ -24,7 +24,7 @@ public class Main {
         for (int i = 0; i <= n; i++) {
             adj.add(new ArrayList<>());
         }
-        for (int i = 0; i < m; i++) {
+        while (m-- > 0) {
             int u = sc.nextInt();
             int v = sc.nextInt();
             adj.get(u).add(v);
