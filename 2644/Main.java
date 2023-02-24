@@ -10,8 +10,7 @@ public class Main {
         dist[st] = 0;
         Q.offer(st);
         while (!Q.isEmpty()) {
-            int cur = Q.peek();
-            Q.poll();
+            int cur = Q.peek(); Q.poll();
             for (int nxt : adj.get(cur)) {
                 if (dist[nxt] == -1) {
                     dist[nxt] = dist[cur] + 1;
