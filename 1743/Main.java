@@ -25,7 +25,8 @@ public class Main {
         a[x][y] = 0;
         Q.offer(new Pair(x, y));
         while (!Q.isEmpty()) {
-            Pair cur = Q.peek(); Q.poll();
+            Pair cur = Q.peek();
+            Q.poll();
             for (int dir = 0; dir < 4; dir++) {
                 int nx = cur.x + dx[dir];
                 int ny = cur.y + dy[dir];
@@ -44,7 +45,7 @@ public class Main {
         n = sc.nextInt();
         m = sc.nextInt();
         k = sc.nextInt();
-        for (int i = 0; i < k; i++) {
+        while (k-- > 0) {
             int r = sc.nextInt();
             int c = sc.nextInt();
             a[r][c] = 1;
