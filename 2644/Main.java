@@ -27,7 +27,7 @@ public class Main {
         v = sc.nextInt();
         m = sc.nextInt();
         Arrays.fill(dist, -1);
-        for (int i = 0; i <= n; i++) {
+        while (n-- >= 0) {
             adj.add(new ArrayList<>());
         }
         while (m-- > 0) {
