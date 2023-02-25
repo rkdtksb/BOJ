@@ -44,7 +44,7 @@ public class Main {
         n = sc.nextInt();
         m = sc.nextInt();
         k = sc.nextInt();
-        while (k-- > 0) {
+        for (int i = 0; i < k; i++) {
             int r = sc.nextInt();
             int c = sc.nextInt();
             a[r][c] = 1;
