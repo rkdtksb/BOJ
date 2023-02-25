@@ -6,7 +6,6 @@ public class Main {
     static int[] dist = new int[105];
     static Queue<Integer> Q = new ArrayDeque<>();
     static ArrayList<ArrayList<Integer>> adj = new ArrayList<>();
-    static final int INF = 0x7fffffff;
 
     static int bfs(int st) {
         int sum = 0;
@@ -32,13 +31,13 @@ public class Main {
         for (int i = 0; i <= n; i++) {
             adj.add(new ArrayList<>());
         }
-        while (m-- > 0) {
+        for (int i = 0; i < m; i++) {
             int u = sc.nextInt();
             int v = sc.nextInt();
             adj.get(u).add(v);
             adj.get(v).add(u);
         }
-        mn = INF;
+        mn = 0x7f7f7f7f;
         for (int i = 1; i <= n; i++) {
             Arrays.fill(dist, -1);
             int sum = bfs(i);
