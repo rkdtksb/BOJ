@@ -27,10 +27,10 @@ public class Main {
         v = sc.nextInt();
         m = sc.nextInt();
         Arrays.fill(dist, -1);
-        while (n-- >= 0) {
+        for (int i = 0; i <= n; i++) {
             adj.add(new ArrayList<>());
         }
-        while (m-- > 0) {
+        for (int i = 0; i < m; i++) {
             int x = sc.nextInt();
             int y = sc.nextInt();
             adj.get(x).add(y);
