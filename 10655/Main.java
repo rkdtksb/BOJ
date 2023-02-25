@@ -6,8 +6,8 @@ public class Main {
     static int[] x = new int[100005];
     static int[] y = new int[100005];
 
-    static int dist(int p, int q) {
-        return Math.abs(x[q] - x[p]) + Math.abs(y[q] - y[p]);
+    static int dist(int a, int b) {
+        return Math.abs(x[b] - x[a]) + Math.abs(y[b] - y[a]);
     }
 
     public static void main(String[] args) {
