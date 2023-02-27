@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Main {
     static int n, k;
-    static int ans, en;
+    static int ans;
     static int[] a = new int[200005];
     static int[] b = new int[100005];
 
@@ -13,7 +13,7 @@ public class Main {
         for (int i = 0; i < n; i++) {
             a[i] = sc.nextInt();
         }
-        en = 0;
+        int en = 0;
         b[a[en]]++;
         for (int st = 0; st < n; st++) {
             while (en + 1 < n && b[a[en + 1]] < k) {
