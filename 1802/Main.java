@@ -22,8 +22,7 @@ public class Main {
         t = sc.nextInt();
         while (t-- > 0) {
             String str = sc.next();
-            if (dfs(str)) System.out.println(POSSIBLE);
-            else System.out.println(IMPOSSIBLE);
+            System.out.println(dfs(str) ? POSSIBLE : IMPOSSIBLE);
         }
     }
 }
