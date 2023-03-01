@@ -2,7 +2,6 @@ import java.util.Scanner;
 
 public class Main {
     static int t;
-    static final String POSSIBLE = "YES", IMPOSSIBLE = "NO";
 
     static boolean dfs(String str) {
         if (str.length() == 1) return true;
@@ -22,7 +21,7 @@ public class Main {
         t = sc.nextInt();
         while (t-- > 0) {
             String str = sc.next();
-            System.out.println(dfs(str) ? POSSIBLE : IMPOSSIBLE);
+            System.out.println(dfs(str) ? "YES" : "NO");
         }
     }
 }
