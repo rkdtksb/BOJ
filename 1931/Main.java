@@ -17,8 +17,6 @@ public class Main {
             if (a[1] == b[1]) return a[0] - b[0];
             return a[1] - b[1];
         });
-        ans = 0;
-        cur = 0;
         for (int i = 0; i < n; i++) {
             if (a[i][0] >= cur) {
                 ans++;
