@@ -26,7 +26,6 @@ public class Main {
         u = sc.nextInt();
         v = sc.nextInt();
         m = sc.nextInt();
-        Arrays.fill(dist, -1);
         for (int i = 0; i <= n; i++) {
             adj.add(new ArrayList<>());
         }
@@ -36,6 +35,7 @@ public class Main {
             adj.get(x).add(y);
             adj.get(y).add(x);
         }
+        Arrays.fill(dist, -1);
         bfs(u);
         System.out.println(dist[v]);
     }
