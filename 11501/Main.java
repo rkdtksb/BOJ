@@ -11,11 +11,10 @@ public class Main {
             int n = sc.nextInt();
             long ans = 0;
             long cur = 0;
-            for (int i = 1; i <= n; i++) {
+            for (int i = 0; i < n; i++) {
                 a[i] = sc.nextLong();
             }
-            cur = a[n];
-            for (int i = n - 1; i > 0; i--) {
+            for (int i = n - 1; i >= 0; i--) {
                 cur = Math.max(cur, a[i]);
                 ans += cur - a[i];
             }
