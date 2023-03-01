@@ -15,7 +15,6 @@ public class Main {
         for (int i = 0; i < n; i++) {
             b[i] = sc.nextLong();
         }
-        ans = 0;
         dis = 0x7f7f7f7f;
         for (int i = 0; i < n - 1; i++) {
             dis = Math.min(dis, b[i]);
