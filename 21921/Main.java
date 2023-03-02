@@ -4,7 +4,6 @@ public class Main {
     static int n, x;
     static int ans1, ans2, sum;
     static int[] a = new int[250005];
-    static final String NO_VISITORS = "SAD";
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -29,7 +28,7 @@ public class Main {
                 ans2++;
             }
         }
-        if (ans1 == 0) System.out.println(NO_VISITORS);
+        if (ans1 == 0) System.out.println("SAD");
         else System.out.printf("%d%n%d", ans1, ans2);
     }
 }
