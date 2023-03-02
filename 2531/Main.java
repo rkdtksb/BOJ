@@ -22,10 +22,10 @@ public class Main {
             b[a[i]]++;
         }
         for (int i = k; i < k + n; i++) {
+            if (b[a[i % n]] == 0) cnt++;
             b[a[i % n]]++;
-            if (b[a[i % n]] == 1) cnt++;
+            if (b[a[i - k]] == 1) cnt--;
             b[a[i - k]]--;
-            if (b[a[i - k]] == 0) cnt--;
             ans = Math.max(ans, cnt);
         }
         System.out.println(ans);
