@@ -10,13 +10,13 @@ public class Main {
         while (t-- > 0) {
             int n = sc.nextInt();
             long ans = 0;
-            long cur = 0;
+            long mx = 0;
             for (int i = 0; i < n; i++) {
                 a[i] = sc.nextLong();
             }
             for (int i = n - 1; i >= 0; i--) {
-                cur = Math.max(cur, a[i]);
-                ans += cur - a[i];
+                mx = Math.max(mx, a[i]);
+                ans += mx - a[i];
             }
             System.out.println(ans);
         }
