@@ -17,8 +17,8 @@ public class Main {
         }
         mn = 0x7f7f7f7f;
         for (int i = 0; i < n - 1; i++) {
-            dis = Math.min(dis, b[i]);
-            ans += a[i] * dis;
+            mn = Math.min(mn, b[i]);
+            ans += a[i] * mn;
         }
         System.out.println(ans);
     }
