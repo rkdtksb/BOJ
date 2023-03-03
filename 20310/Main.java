@@ -1,8 +1,8 @@
 import java.util.Scanner;
 
 public class Main {
-    static int n, m;
     static String str;
+    static int n, m;
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
