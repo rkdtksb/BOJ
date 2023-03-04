@@ -2,7 +2,7 @@ import java.util.*;
 
 public class Main {
     static int n, m;
-    static int ans, mn;
+    static int ans;
     static int[] dist = new int[105];
     static Queue<Integer> Q = new ArrayDeque<>();
     static ArrayList<ArrayList<Integer>> adj = new ArrayList<>();
@@ -37,7 +37,7 @@ public class Main {
             adj.get(u).add(v);
             adj.get(v).add(u);
         }
-        mn = 0x7f7f7f7f;
+        int mn = 0x7f7f7f7f;
         for (int i = 1; i <= n; i++) {
             Arrays.fill(dist, -1);
             int sum = bfs(i);
