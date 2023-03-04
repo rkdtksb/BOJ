@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Main {
     static int n, x;
-    static int ans1, ans2, sum;
+    static int ans1, ans2;
     static int[] a = new int[250005];
 
     public static void main(String[] args) {
@@ -12,6 +12,7 @@ public class Main {
         for (int i = 0; i < n; i++) {
             a[i] = sc.nextInt();
         }
+        int sum = 0;
         for (int i = 0; i < x; i++) {
             sum += a[i];
         }
