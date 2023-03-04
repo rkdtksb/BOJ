@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class Main {
     static int n;
-    static int ans, cur;
+    static int ans;
     static int[][] a = new int[100005][2];
 
     public static void main(String[] args) {
@@ -17,6 +17,7 @@ public class Main {
             if (a[1] == b[1]) return a[0] - b[0];
             return a[1] - b[1];
         });
+        int cur = 0;
         for (int i = 0; i < n; i++) {
             if (a[i][0] >= cur) {
                 ans++;
