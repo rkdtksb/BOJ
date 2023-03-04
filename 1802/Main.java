@@ -9,8 +9,8 @@ public class Main {
         String l = str.substring(0, mid);
         String r = str.substring(mid + 1);
         for (int i = 0; i < l.length(); i++) {
-            int lc = l.charAt(i);
-            int rc = r.charAt(r.length() - 1 - i);
+            char lc = l.charAt(i);
+            char rc = r.charAt(r.length() - 1 - i);
             if (lc == rc) return false;
         }
         return dfs(l);
