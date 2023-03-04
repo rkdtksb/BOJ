@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Main {
     static int n;
-    static int ans, tot;
+    static int ans;
     static int[] x = new int[100005];
     static int[] y = new int[100005];
 
@@ -17,6 +17,7 @@ public class Main {
             x[i] = sc.nextInt();
             y[i] = sc.nextInt();
         }
+        int tot = 0;
         for (int i = 1; i < n; i++) {
             tot += dist(i - 1, i);
         }
