@@ -41,7 +41,7 @@ public class Main {
         for (int i = 0; i <= n; i++) {
             adj.add(new ArrayList<>());
         }
-        for (int i = 0; i < n - 1; i++) {
+        for (int i = 1; i < n; i++) {
             int p = sc.nextInt();
             int q = sc.nextInt();
             int r = sc.nextInt();
@@ -51,7 +51,7 @@ public class Main {
         for (int i = 0; i < q; i++) {
             int k = sc.nextInt();
             int v = sc.nextInt();
-            Arrays.fill(vis, 0, n + 1, false);
+            Arrays.fill(vis, false);
             System.out.println(bfs(k, v));
         }
     }
