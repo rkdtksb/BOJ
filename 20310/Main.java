@@ -20,11 +20,9 @@ public class Main {
             if (ch == '0' && n > 0) {
                 System.out.print(0);
                 n--;
-            }
-            else if (ch == '1' && m > 0) {
+            } else if (ch == '1' && m > 0) {
                 m--;
-            }
-            else if (ch == '1' && m == 0) {
+            } else if (ch == '1' && m == 0) {
                 System.out.print(1);
             }
         }
