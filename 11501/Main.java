@@ -9,11 +9,11 @@ public class Main {
         t = sc.nextInt();
         while (t-- > 0) {
             int n = sc.nextInt();
-            long ans = 0;
-            long mx = 0;
             for (int i = 0; i < n; i++) {
                 a[i] = sc.nextLong();
             }
+            long ans = 0;
+            long mx = 0;
             for (int i = n - 1; i >= 0; i--) {
                 mx = Math.max(mx, a[i]);
                 ans += mx - a[i];
