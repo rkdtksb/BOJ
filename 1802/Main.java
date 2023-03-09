@@ -8,9 +8,9 @@ public class Main {
         int mid = str.length() / 2;
         String l = str.substring(0, mid);
         String r = str.substring(mid + 1);
-        for (int i = 0; i < l.length(); i++) {
+        for (int i = 0; i < mid; i++) {
             char lc = l.charAt(i);
-            char rc = r.charAt(r.length() - 1 - i);
+            char rc = r.charAt(mid - 1 - i);
             if (lc == rc) return false;
         }
         return dfs(l);
@@ -21,7 +21,8 @@ public class Main {
         t = sc.nextInt();
         while (t-- > 0) {
             String str = sc.next();
-            System.out.println(dfs(str) ? "YES" : "NO");
+            if (dfs(str)) System.out.println("YES");
+            else System.out.println("NO");
         }
     }
 }
