@@ -24,8 +24,7 @@ public class Main {
             if (ans1 < sum) {
                 ans1 = sum;
                 ans2 = 1;
-            }
-            else if (ans1 == sum) {
+            } else if (ans1 == sum) {
                 ans2++;
             }
         }
