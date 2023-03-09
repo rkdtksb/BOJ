@@ -14,8 +14,7 @@ public class Main {
             for (int j = 1; j <= m; j++) {
                 if (a.charAt(i - 1) == b.charAt(j - 1)) {
                     d[i][j] = d[i - 1][j - 1] + 1;
-                }
-                else {
+                } else {
                     d[i][j] = Math.max(d[i - 1][j], d[i][j - 1]);
                 }
             }
