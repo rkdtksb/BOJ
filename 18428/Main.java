@@ -48,8 +48,7 @@ public class Main {
         n = sc.nextInt();
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
-                String str = sc.next();
-                a[i][j] = str;
+                a[i][j] = sc.next();
             }
         }
         if (dfs(0)) System.out.println("YES");
