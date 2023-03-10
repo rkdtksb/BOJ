@@ -12,9 +12,9 @@ public class Main {
         }
         m = sc.nextInt();
         while (m-- > 0) {
-            int t = sc.nextInt();
+            int k = sc.nextInt();
             int x = sc.nextInt();
-            if (t == 1) {
+            if (k == 1) {
                 for (int i = x; i <= n; i += x) {
                     a[i] ^= 1;
                 }
