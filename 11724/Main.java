@@ -10,10 +10,10 @@ public class Main {
     static Queue<Integer> Q = new ArrayDeque<>();
     static ArrayList<ArrayList<Integer>> adj = new ArrayList<>();
 
-    static void bfs(int k) {
+    static void bfs(int st) {
         ans++;
-        vis[k] = true;
-        Q.offer(k);
+        vis[st] = true;
+        Q.offer(st);
         while (!Q.isEmpty()) {
             int cur = Q.peek(); Q.poll();
             for (int nxt : adj.get(cur)) {
